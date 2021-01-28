@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Welcome</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="/src/assets/bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/css/bootstrap-grid.min.css">
+
+  <style>
+           h2{
+    text-align: center;
+    font-size: 50px;
+    color: aqua;
+}
+  </style>
+ 
+  
+</head>
+<body>
+    <hr>
+    <h2>
+        Students who are currently Registered
+     </h2>
+     <br><br>
+    <table class="table table-warning table-striped">
+        <thead style="background-color: rgb(42, 165, 114);">
+          <tr>
+            <th scope="col">Student number</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">subject</th>
+            <th scope="col">User handle</th>
+          </tr>
+        </thead>
+        <tbody style="background-color: rgb(95, 145, 160)" >
+          <tr *ngFor="let user of users">
+            
+            <td>{{user.studentno}}</td>
+            <td>{{user.fname}}</td>
+            <td>{{user.surname}}</td>
+            <td>{{user.subject}}</td>
+            <td>{{user.username}}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+</body>
+</html>
+
