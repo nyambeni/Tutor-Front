@@ -31,17 +31,18 @@
             <th scope="col">Firstname</th>
             <th scope="col">Lastname</th>
             <th scope="col">subject</th>
-            <th scope="col">User handle</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody style="background-color: rgb(95, 145, 160)" >
-          <tr *ngFor="let user of users">
+          <tr *ngFor="let student of students">
             
-            <td>{{user.studentno}}</td>
-            <td>{{user.fname}}</td>
-            <td>{{user.surname}}</td>
-            <td>{{user.subject}}</td>
-            <td>{{user.username}}</td>
+            <td>{{student.studentno}}</td>
+            <td>{{student.fname}}</td>
+            <td>{{student.surname}}</td>
+            <td>{{student.subject}}</td>
+            <td><button class="btn btn-success" type="submit">DELETE RECORD</button></td>
+
           </tr>
          
         </tbody>

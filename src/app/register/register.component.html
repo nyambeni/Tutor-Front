@@ -159,18 +159,18 @@ label
 
                     <div class="form__item  form-group">
                         <label for="fname" class="form__label"> first name </label>
-                        <input [(ngModel)]="registerUserData.fname" class="form__input form-control" type="text" name="fname" id="fname" placeholder="Enter your firstname" required ng-model="fname" ng-required="true">
+                        <input [(ngModel)]="registerStudent.fname" class="form__input form-control" type="text" name="fname" id="fname" placeholder="Enter your firstname" required ng-model="fname" ng-required="true">
 
                             <label for="surname" class="form__label"> surname </label>
-                            <input [(ngModel)]="registerUserData.surname" class="form__input form-control" type="text" name="surname" id="surname" placeholder="Enter your surname" required ng-model="surname" ng-required="true">
+                            <input [(ngModel)]="registerStudent.surname" class="form__input form-control" type="text" name="surname" id="surname" placeholder="Enter your surname" required ng-model="surname" ng-required="true">
 
                                 <label for="studentno" class="form__label"> Student Number </label>
-                                <input [(ngModel)]="registerUserData.studentno" class="form__input form__input--small form-control" type="number" name="studentno" id="studentno" placeholder="Enter Student number " required>
+                                <input [(ngModel)]="registerStudent.studentno" class="form__input form__input--small form-control" type="number" name="studentno" id="studentno" placeholder="Enter Student number " required>
 
                                     <br> <label for="subject">Subject</label><br>
                                    
 
-                                    <select class="form-select" aria-label="Disabled select example" style="font-size: 20px;">
+                                    <select [(ngModel)]="registerStudent.subject"  class="form-select" aria-label="Disabled select example" style="font-size: 20px;">
                                         <option selected>Click here to select subject</option>
                                         <option value="1">Mathematics</option>
                                         <option value="2">Programming</option>
@@ -180,13 +180,13 @@ label
                                       </select>
 
                                 <br><br><label for="username" class="form__label"> User name </label>
-                                <input [(ngModel)]="registerUserData.username" class="form__input form-control" type="text" name="username" id="username" placeholder="Enter a username" required ng-model="username" ng-required="true">
+                                <input [(ngModel)]="registerStudent.username" class="form__input form-control" type="text" name="username" id="username" placeholder="Enter a username" required ng-model="username" ng-required="true">
 
                                 <label for="password" class="form__label"> Create Password </label>
-                                <input [(ngModel)]="registerUserData.password" class="form__input form__input--small form-control" type="text" name="studentno" id="studentno" placeholder="Enter password " required ng-model="password" required>
+                                <input [(ngModel)]="registerStudent.password" class="form__input form__input--small form-control" type="text" name="studentno" id="studentno" placeholder="Enter password " required ng-model="password" required>
                                
                                 <br>
-                                <button (click)="registerUser()" type="button" class="reg_btn">Register</button>
+                                <button (click)="registerStud()" type="button" class="reg_btn">Register</button>
                     
                                 <p> already registered? <a routerLink="/login" routerLinkActive=
                                     "">Login</a></p>

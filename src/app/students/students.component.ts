@@ -9,7 +9,8 @@ import { UserService } from './../../app/user.service';
 })
 export class StudentsComponent implements OnInit {
 
-  users:any=[];
+  students:any=[];
+  
   constructor(private myService:UserService) { }
 
   ngOnInit(): void {
@@ -18,8 +19,9 @@ export class StudentsComponent implements OnInit {
 
   getUsers()
   {
-     this.myService.getUser().subscribe((data:any) => this.users=data);
+     this.myService.getUser().subscribe((data:any) => this.students=data);
 
   }
+  
 
 }

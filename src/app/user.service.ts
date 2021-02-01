@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  userUrl="http://localhost:1000/users";
+  userUrl="http://localhost:4000/students";
+  Studenturl = "http://localhost:4000/register"
   constructor(private http:HttpClient) { }
 
   public getUser(){
@@ -14,5 +15,9 @@ export class UserService {
     return this.http.get<any>( this.userUrl);
 
   }
+  
+  registerStud(students:any){
+    return this.http.post<any>(this.Studenturl,students)
 
+  }
 }
