@@ -1,9 +1,10 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>Login Page</title>
    
-     <!-- Style -->
+<head>
+    <title>Home Page</title>
+   
+
+    <!-- Style -->
 
 <style>
     /* You can add global styles to this file, and also import other style files */
@@ -30,24 +31,24 @@ body
 .loginform
 {
 
-    width: 500px;
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
-    background: #fff;
-    padding: 30px;
-    margin: 8% auto 0;
-    text-align: center;
-    margin-top: 1%;
-}
-
-.homeform
-{
-
     width: 300px;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
     background: #fff;
     padding: 30px;
     margin: 8% auto 0;
     text-align: center;
+}
+
+.homeform
+{
+
+    width: 770px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 30px;
+    margin: 8% auto 0;
+    text-align: center;
+    margin-top: 0.5%;
 }
 
 .regform h1{
@@ -65,15 +66,15 @@ body
 .loginform h1{
 
     color: #44a6ec;
-    margin-bottom:5px;
+    margin-bottom:30px;
 }
 
 .input-box
 {
-   border-radius: 5px; 
+   border-radius: 20px; 
    padding:10px;
    margin:10px 0;
-   width:110%;
+   width:50%;
    border:1px solid #999;
    outline:none;
 }
@@ -98,10 +99,8 @@ button{
 
 img
 {
-    width:90px ;
-}
-h1{
-    font-size: large;
+    width:140px ;
+    height: 140px;
 }
 
 .container
@@ -137,47 +136,43 @@ nav a:hover{
     transition: .4s;
 
 }
+
+h1
+{
+    font-size: 30px;
+}
 label
 {
     font-size: larger;
 }
-
-</style>   
-
-
-   
+</style>    
 </head>
+
 <body>
 
-    <div class="loginform">
-
-            <img src="assets\pictures\img1.png">
-  
-            <h1>Login here</h1>
-            <hr>
-            <form>
-
-               
-                <label>Username: <input type="text" name="username" class="input-box"  placeholder="Username here" ng-model="username" required name="username"></label><br>
-                
-                <label>Password: <input type="password" name="userpass" class="input-box"  placeholder="Password here" ng-model="userpass" required name="userpass"></label><br>
-                <br>
-        
-               <!--  <button type="submit" class="reg_btn">Login </button><p>-->
-                    <button [routerLink]="'/contents'" class="reg_btn"> Login</button>
-                    <p> haven't registered? <a routerLink="/register" routerLinkActive=
-                        "">Register</a></p>
-                    <br>
-                    <button [routerLink]="'/myAdmin'" class="reg_btn"> Login as Admin</button>
+        <div class="homeform">
             
-                
-                    
+            <img src="assets\pictures\img1.png">
+
+            <hr>
+
+            
+            <h1>Welcome Admin</h1>
+            
+            <form>
+            
+                <button [routerLink]="'/update-content'" class="btn btn-info"> Edit Content</button>
+                <br>
+                <button [routerLink]="'/students'" class="btn btn-info"> View Registered</button>
+             
+
             </form>
 
             <hr>
            <p> &copy; all rights reserved</p>
 
-
         </div>
 </body>
 </html>
+
+<router-outlet></router-outlet>

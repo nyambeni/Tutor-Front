@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { StudentsComponent } from './students/students.component';
+import { MyAdminComponent } from './my-admin/my-admin.component';
+import { UpdateContentComponent } from './update-content/update-content.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'students',
     component: StudentsComponent
+  },
+  {
+    path: 'myAdmin',
+    component: MyAdminComponent
+  },
+  {
+    path: 'update-content',
+    component: UpdateContentComponent
   }
 ];
 
