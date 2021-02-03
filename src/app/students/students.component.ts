@@ -14,13 +14,19 @@ export class StudentsComponent implements OnInit {
   constructor(private myService:UserService) { }
 
   ngOnInit(): void {
-    this.getUsers();
+    this.getStud();
   }
 
-  getUsers()
+  getStud()
   {
-     this.myService.getUser().subscribe((data:any) => this.students=data);
+     this.myService.getStud().subscribe((data:any) => this.students=data);
 
+  }
+  deleteStud(studentno: number)
+  {
+    this.myService.deleteStud(studentno).subscribe(data => {
+      this.getStud();
+    })
   }
   
 

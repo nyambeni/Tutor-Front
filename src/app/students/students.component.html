@@ -41,7 +41,7 @@
             <td>{{student.fname}}</td>
             <td>{{student.surname}}</td>
             <td>{{student.subject}}</td>
-            <td><button class="btn btn-success" type="submit">DELETE RECORD</button></td>
+            <td><button (click) = "deleteStud(student.studentno);" class="btn btn-danger" type="button" [routerLink]="'/students'">DELETE RECORD</button></td>
 
           </tr>
          
