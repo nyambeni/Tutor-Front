@@ -1,3 +1,30 @@
-<angular-file-uploader
-      [config]="afuConfig">
-</angular-file-uploader>
+<div class="loginform">
+
+      <img src="assets\pictures\img1.png">
+
+      <h1>Login here</h1>
+      <hr>
+      <form>
+
+         
+          <label>Username: <input type="text" name="username" class="input-box"  placeholder="Username here" ng-model="username" required name="username"></label><br>
+          
+          <label>Password: <input type="password" name="userpass" class="input-box"  placeholder="Password here" ng-model="userpass" required name="userpass"></label><br>
+          <br>
+  
+         <!--  <button type="submit" class="reg_btn">Login </button><p>-->
+              <button [routerLink]="'/contents'" class="reg_btn"> Login</button>
+              <p> haven't registered? <a routerLink="/register" routerLinkActive=
+                  "">Register</a></p>
+              <br>
+              <button [routerLink]="'/myAdmin'" class="reg_btn"> Login as Admin</button>
+      
+          
+              
+      </form>
+
+      <hr>
+     <p> &copy; all rights reserved</p>
+
+
+  </div>
