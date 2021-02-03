@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { StudentsComponent } from './students/students.component';
 import { MyAdminComponent } from './my-admin/my-admin.component';
 import { UpdateContentComponent } from './update-content/update-content.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'update-content',
     component: UpdateContentComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   }
 ];
 

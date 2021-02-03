@@ -14,6 +14,7 @@ import { RegisterService } from './register.service';
 import { MyAdminComponent } from './my-admin/my-admin.component';
 import { UpdateContentComponent } from './update-content/update-content.component';
 import { AngularFileUploaderModule } from "angular-file-uploader";
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
     StudentsComponent,
     MyAdminComponent,
     UpdateContentComponent,
+    AboutComponent,
     
   ],
   imports: [
